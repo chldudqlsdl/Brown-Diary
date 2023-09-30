@@ -1,12 +1,43 @@
 import UIKit
 
-var greeting = "Hello, playground"
-
 // func
 func rollDice() -> Int {
     return Int.random(in: 1...6)
 }
 rollDice()
+
+// input Parameter Label
+// 내외부 파라미터 바꾸기
+func printName1(of name: String) {
+    print(name)
+}
+printName1(of: "Brown")
+
+// 외부 파라미터 생략
+func printName2(_ name: String) {
+    print(name)
+}
+printName2("Brown")
+
+// throwing function
+enum DivideError : Error {
+    case cannotZero
+}
+
+func divide(devidend: Int, devisor: Int) throws -> Int {
+    if devisor == 0 {
+        throw DivideError.cannotZero
+    }
+    return Int(devidend / devisor)
+}
+
+do {
+    let result = try divide(devidend: 80, devisor: 0)
+    print(result)
+} catch {
+    print(error.localizedDescription)
+}
+
 
 // Closure
 // 상수에 함수 할당하고 그 상수호출하기
