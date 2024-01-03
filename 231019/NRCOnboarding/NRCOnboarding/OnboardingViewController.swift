@@ -22,6 +22,7 @@ class OnboardingViewController: UIViewController {
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
+            layout.scrollDirection = .horizontal
         }
         
         pageControl.numberOfPages = messages.count
