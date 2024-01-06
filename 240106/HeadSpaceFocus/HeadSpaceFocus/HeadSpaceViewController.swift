@@ -10,6 +10,10 @@ import UIKit
 class HeadSpaceViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var refreshButton: UIButton!
+    
+    var curated: Bool = false
+    var items: [Focus] = Focus.list
     
     enum Section {
         case main
@@ -21,21 +25,25 @@ class HeadSpaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshButton.layer.cornerRadius = 10
+        
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeadSpaceCell", for: indexPath) as? HeadSpaceCell else {
                 return nil
             }
+//            cell.configure(Focus.list[indexPath.item])
             cell.configure(item)
             return cell
         })
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Item.list, toSection: .main)
+        snapshot.appendItems(items, toSection: .main)
         dataSource.apply(snapshot)
         
         collectionView.collectionViewLayout = layout()
+        updateTitle()
     }
     private func layout() -> UICollectionViewCompositionalLayout {
         
@@ -52,4 +60,21 @@ class HeadSpaceViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        curated.toggle()
+        items = curated ? Focus.recommendations : Focus.list
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items, toSection: .main)
+        dataSource.apply(snapshot)
+        updateTitle()
+    }
+    
+    func updateTitle() {
+        let title = curated ? "See All" : "See Recommendation"
+        refreshButton.setTitle(title, for: .normal)
+    }
+    
 }
