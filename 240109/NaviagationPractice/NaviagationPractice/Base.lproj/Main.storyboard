@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Focus View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FocusViewController" id="BYZ-38-t0r" customClass="FocusViewController" customModule="NaviagationPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dCb-CE-h0e">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RcR-2F-6A4">
+                                    <size key="itemSize" width="393" height="171"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FocusCollectionViewCell" id="8AS-98-K2X" customClass="FocusCollectionViewCell" customModule="NaviagationPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="re3-fN-6PD">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kessonga's Guide to Focus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdM-5m-5cq">
+                                                    <rect key="frame" x="30" y="29.999999999999996" width="149.66666666666666" height="40.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain a mindful approach to focus and attention." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68U-ft-ZWe">
+                                                    <rect key="frame" x="30" y="90.666666666666671" width="175" height="61.000000000000014"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-oM-Flw">
+                                                    <rect key="frame" x="243" y="-0.3333333333333286" width="150" height="172"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="2T3-Ns-zVC"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="cloud.rain" catalog="system" renderingMode="original"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fdM-5m-5cq" firstAttribute="top" secondItem="re3-fN-6PD" secondAttribute="top" constant="30" id="2gE-5y-qbq"/>
+                                                <constraint firstItem="aYK-oM-Flw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="68U-ft-ZWe" secondAttribute="trailing" constant="30" id="4cU-Yt-wMi"/>
+                                                <constraint firstItem="68U-ft-ZWe" firstAttribute="top" secondItem="fdM-5m-5cq" secondAttribute="bottom" constant="20" id="8hq-0Y-edD"/>
+                                                <constraint firstItem="fdM-5m-5cq" firstAttribute="leading" secondItem="re3-fN-6PD" secondAttribute="leading" constant="30" id="TJP-ou-od4"/>
+                                                <constraint firstAttribute="bottom" secondItem="aYK-oM-Flw" secondAttribute="bottom" id="YPA-B3-xHa"/>
+                                                <constraint firstItem="aYK-oM-Flw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fdM-5m-5cq" secondAttribute="trailing" constant="30" id="bGM-oQ-F8N"/>
+                                                <constraint firstItem="68U-ft-ZWe" firstAttribute="leading" secondItem="re3-fN-6PD" secondAttribute="leading" constant="30" id="dpe-ep-0Wo"/>
+                                                <constraint firstItem="aYK-oM-Flw" firstAttribute="top" secondItem="re3-fN-6PD" secondAttribute="top" id="q1H-9b-aGd"/>
+                                                <constraint firstAttribute="trailing" secondItem="aYK-oM-Flw" secondAttribute="trailing" id="rrI-r4-48C"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="171"/>
+                                        <connections>
+                                            <outlet property="focusDescription" destination="68U-ft-ZWe" id="6R1-ji-8Ay"/>
+                                            <outlet property="focusThumbnail" destination="aYK-oM-Flw" id="Ksc-43-p8F"/>
+                                            <outlet property="focusTitle" destination="fdM-5m-5cq" id="Bf1-TV-Diz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dCb-CE-h0e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6W2-8c-6GG"/>
+                            <constraint firstItem="dCb-CE-h0e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JRc-TK-dfe"/>
+                            <constraint firstItem="dCb-CE-h0e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="X2C-5I-dt7"/>
+                            <constraint firstItem="dCb-CE-h0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cgX-UX-hkz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dCb-CE-h0e" id="HPH-QC-PzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.rain" catalog="system" width="126" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
