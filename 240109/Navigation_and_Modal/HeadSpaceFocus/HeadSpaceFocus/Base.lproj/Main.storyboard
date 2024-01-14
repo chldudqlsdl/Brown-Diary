@@ -119,6 +119,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tJO-wC-UP5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-cq-UQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Azt-US-1Lq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7YP-mO-r8H">
@@ -131,7 +132,6 @@
                         <segue destination="07K-eu-e7f" kind="relationship" relationship="rootViewController" id="cI5-hr-iIl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-cq-UQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-75.362318840579718" y="108.48214285714285"/>
         </scene>
@@ -145,7 +145,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

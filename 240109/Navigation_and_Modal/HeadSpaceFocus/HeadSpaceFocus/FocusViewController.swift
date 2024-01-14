@@ -80,6 +80,7 @@ class FocusViewController: UIViewController {
         datasource.apply(snapshot)
         
         updateButtonTitle()
+        
     }
 }
 

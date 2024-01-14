@@ -53,7 +53,7 @@ class FrameworkListViewController: UIViewController {
         // output -> items 가 세팅이 되었을 때(ex - 서버통신)
         $list
             .receive(on: RunLoop.main)
-            .sink {[unowned self] list in
+            .sink { [unowned self] list in
             self.applySectionItems()
         }
             .store(in: &subscriptions)

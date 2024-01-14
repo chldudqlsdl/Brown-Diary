@@ -12,12 +12,11 @@ passthrough.send("Here")
 passthrough.send("We")
 
 // CurrentValueSubject
-let currentvalue = CurrentValueSubject<String, Never>("Hello")
+var currentvalue = CurrentValueSubject<String, Never>("Hello")
 let subscription2 = currentvalue.sink { value in
     print(value)
 }
-currentvalue.send("Bye")
-currentvalue.value
+//currentvalue.send("Bye")
 
 //동시타
 let publisher = ["go", "!"].publisher
