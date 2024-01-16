@@ -26,7 +26,6 @@ struct GithubProfile: Codable {
     }
 }
 
-
 final class NetworkService {
     
     let session : URLSession
