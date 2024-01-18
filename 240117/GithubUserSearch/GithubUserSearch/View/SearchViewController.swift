@@ -87,6 +87,24 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(searchController.searchBar.text)
+        
+        guard let keyword = searchController.searchBar.text, !keyword.isEmpty else { return }
+        
+        let base = "https://api.github.com/"
+        let path = "search/users"
+        let params : [String : String] = ["q":keyword]
+        let header : [String : String] = ["Content-Type":"application/json"]
+        
+        let resource = Resource<SearchUserResponse>(base: base, path: path, params: params, header: header)
+        
+        network
+            .load(resource)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { result in
+                self.users = result.items
+            }
+            .store(in: &subscriptions)
     }
 }
 
@@ -121,10 +139,18 @@ extension SearchViewController: UISearchBarDelegate {
         
         network
             .load(resource)
-            .map{$0.items}
-            .replaceError(with: [])
-            .assign(to: \.users, on: self)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { result in
+                self.users = result.items
+            }
             .store(in: &subscriptions)
+
+
+//            .map{$0.items}
+//            .replaceError(with: [])
+//            .assign(to: \.users, on: self)
+//            .store(in: &subscriptions)
             
 //        URLSession.shared.dataTaskPublisher(for: urlRequest)
 //            .map {$0.data}

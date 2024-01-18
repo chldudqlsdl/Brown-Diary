@@ -11,7 +11,7 @@ let subscription1 = just.sink { value in
 }
 
 let arrayPublisher = [1, 2, 3, 4, 5].publisher
-let subscription2 = arrayPublisher.sink { value in
+let subscription = arrayPublisher.sink { value in
     print("Recieved Value : \(value)")
 }
 

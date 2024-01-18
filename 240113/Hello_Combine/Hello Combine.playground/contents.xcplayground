@@ -10,5 +10,7 @@
         <page name='Operator - map &amp; filter'/>
         <page name='Operator - combineLatest'/>
         <page name='Operator - removeDup &amp; compactMap'/>
+        <page name='GPT_Code'/>
+        <page name='Practice'/>
     </pages>
 </playground>

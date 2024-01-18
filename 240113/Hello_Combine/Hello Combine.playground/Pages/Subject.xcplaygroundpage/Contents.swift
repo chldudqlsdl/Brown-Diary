@@ -5,21 +5,23 @@ import Combine
 
 // PassthroughSubject
 let passthrough = PassthroughSubject<String, Never>()
-let subscription1 = passthrough.sink { value in
+passthrough
+    .sink { value in
     print(value)
 }
 passthrough.send("Here")
 passthrough.send("We")
 
 // CurrentValueSubject
-var currentvalue = CurrentValueSubject<String, Never>("Hello")
-let subscription2 = currentvalue.sink { value in
+var currentvalue = CurrentValueSubject<String, Never>("Hi")
+currentvalue
+    .sink { value in
     print(value)
 }
-//currentvalue.send("Bye")
+currentvalue.send("Bye")
 
 //동시타
-let publisher = ["go", "!"].publisher
+let publisher = ["!"].publisher
 publisher.subscribe(passthrough)
 
 
