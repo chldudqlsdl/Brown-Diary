@@ -13,7 +13,7 @@ let subcription = arrPublisher
         print("value : \(value) , thread : \(Thread.current)")
         return value * 2
     })
-    .receive(on: DispatchQueue.main)
+//    .receive(on: DispatchQueue.main)
     .sink { value in
     print("value : \(value) , thread : \(Thread.current)")
 }

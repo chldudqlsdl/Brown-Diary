@@ -40,7 +40,8 @@ class FrameworkDetailViewController: UIViewController {
         
         //Output
         
-        framework.sink { framework in
+        framework
+            .sink { framework in
             self.imageView.image = UIImage(named: framework.imageName)
             self.titleLabel.text = framework.name
             self.descriptionLabel.text = framework.description
