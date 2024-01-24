@@ -56,7 +56,7 @@ final class NetworkService {
 }
 
 let networkservice = NetworkService(configuration: .default)
-let subscription = networkservice
+let hi = networkservice
     .fetchProfile(name: "cafielo")
     .print()
     .receive(on: RunLoop.main)

@@ -97,7 +97,7 @@ extension UserProfileViewController: UISearchBarDelegate {
         let base = "https://api.github.com/"
         let path = "users/\(keyword)"
         //Dictionary
-        let params : [String : String] = ["hah":"hah"]
+        let params : [String : String] = [:]
         let header : [String : String] = ["Content-Type":"application/json"]
         
         var urlComponents = URLComponents(string: base + path)!
@@ -135,5 +135,6 @@ extension UserProfileViewController: UISearchBarDelegate {
             }
             .store(in: &subscription)
     }
+    
 }
 
