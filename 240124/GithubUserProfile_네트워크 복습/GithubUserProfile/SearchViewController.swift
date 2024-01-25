@@ -106,10 +106,6 @@ extension UserProfileViewController: UISearchResultsUpdating, UISearchBarDelegat
                 self.user.send(profile)
             }
             .store(in: &subscriptions)
-
-     
-
-        
         
 //        let base = "https://api.github.com/"
 //        let path = "users/\(keyword)"

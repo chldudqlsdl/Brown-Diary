@@ -29,10 +29,15 @@ class SearchViewModel {
         )
         
         network.load(resource)
+            .print()
             .map { $0.items }
             .replaceError(with: [])
             .receive(on: RunLoop.main)
-            .assign(to: \.users.value, on: self)
+//            .assign(to: \.users.value, on: self)
+            .sink(receiveValue: { response in
+                self.users.send(response)
+            })
             .store(in: &subscriptions)
+        
     }
 }
