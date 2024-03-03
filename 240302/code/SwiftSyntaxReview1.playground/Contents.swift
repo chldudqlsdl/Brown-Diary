@@ -68,10 +68,23 @@ import UIKit
 
 // array enumerated
 
-var nums = [10, 11, 12, 13, 14]
+//var nums = [10, 11, 12, 13, 14]
+//
+//for tuple in nums.enumerated() {
+//    print(tuple)
+//}
 
-for tuple in nums.enumerated() {
-    print(tuple)
+// Enum 연관값 바인딩
+
+enum Direction {
+    case left(degree: Int)
+    case right(degree: Int)
+}
+
+var direction = Direction.left(degree: 90)
+
+if case .left(let degree) = direction {
+    print(degree)
 }
 
 
