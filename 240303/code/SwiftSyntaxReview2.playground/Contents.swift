@@ -101,6 +101,31 @@
 //    }
 //}
 
+// 클로저메모리 누수
+
+class Dog {
+    var name = "초코"
+    
+    var run: (() -> Void)?
+    
+    func saveClosure() {
+        // 클로저를 인스턴스의 변수에 저장
+        run = { [weak self] in
+            print("\(self?.name)가 뛴다.") // RC + 1
+        }
+    }
+    
+    deinit {
+        print("디이닛")
+    }
+}
+
+func doSomething() {
+    let choco: Dog? = Dog()
+    choco?.saveClosure()  // RC + 1 강한 참조사이클 일어남 (메모리 누수가 일어남)
+}
+
+doSomething()
 
 
 
