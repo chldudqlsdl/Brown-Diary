@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    lazy var emailTextFieldView: UIView = {
+    private lazy var emailTextFieldView: UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
         view.layer.cornerRadius = 5
         view.clipsToBounds = true
         view.addSubview(emailTextField)
@@ -23,11 +23,11 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.text = "이메일주소 또는 전화번호"
         label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .white
+        label.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
         return label
     }()
     
-    let emailTextField : UITextField = {
+    private lazy var emailTextField : UITextField = {
         var tf = UITextField()
         tf.frame.size.height = 48
         tf.backgroundColor = .clear
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     lazy var passwordTextFieldView: UIView = {
         let view = UIView()
         view.frame.size.height = 48
-        view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
         view.layer.cornerRadius = 5
         view.clipsToBounds = true
         view.addSubview(passwordTextField)
@@ -56,11 +56,11 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.text = "비밀번호"
         label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .white
+        label.textColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
         return label
     }()
     
-    let passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.frame.size.height = 48
         tf.backgroundColor = .clear
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         return tf
     }()
     
-    let passwordSecureButton: UIButton = {
+    private lazy var passwordSecureButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("표시", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -84,13 +84,13 @@ class ViewController: UIViewController {
         return button
     }()
     
-    let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = .clear
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
         button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         button.setTitle("로그인", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.isEnabled = false
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
     lazy var emailInfoLabelCenterYConstraint = emailInfoLabel.centerYAnchor.constraint(equalTo: emailTextFieldView.centerYAnchor, constant: 0)
     lazy var passwordInfoLabelCenterYConstraint = passwordInfoLabel.centerYAnchor.constraint(equalTo: passwordTextFieldView.centerYAnchor, constant: 0)
     
-    let passwordResetButton : UIButton = {
+    private lazy var passwordResetButton : UIButton = {
         let btn = UIButton(type: .custom)
         btn.backgroundColor = .clear
         btn.setTitle("비밀번호 재설정", for: .normal)
@@ -173,8 +173,8 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -150),
+//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -200),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             stackView.heightAnchor.constraint(equalToConstant: textViewHeight*3 + 36)
@@ -220,13 +220,13 @@ class ViewController: UIViewController {
 extension ViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == emailTextField {
-            emailTextFieldView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            emailTextFieldView.backgroundColor = #colorLiteral(red: 0.2972877622, green: 0.2973434925, blue: 0.297280401, alpha: 1)
             emailInfoLabel.font = UIFont.systemFont(ofSize: 11)
             emailInfoLabelCenterYConstraint.constant = -13
         }
         
         if textField == passwordTextField {
-            passwordTextFieldView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            passwordTextFieldView.backgroundColor = #colorLiteral(red: 0.2972877622, green: 0.2973434925, blue: 0.297280401, alpha: 1)
             passwordInfoLabel.font = UIFont.systemFont(ofSize: 11)
             passwordInfoLabelCenterYConstraint.constant = -13
         }
@@ -238,7 +238,7 @@ extension ViewController : UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == emailTextField {
-            emailTextFieldView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            emailTextFieldView.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
             if emailTextField.text == "" {
                 emailInfoLabel.font = UIFont.systemFont(ofSize: 18)
                 emailInfoLabelCenterYConstraint.constant = 0
@@ -246,7 +246,7 @@ extension ViewController : UITextFieldDelegate {
         }
         
         if textField == passwordTextField {
-            passwordTextFieldView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            passwordTextFieldView.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
             if passwordTextField.text == "" {
                 passwordInfoLabel.font = UIFont.systemFont(ofSize: 18)
                 passwordInfoLabelCenterYConstraint.constant = 0
