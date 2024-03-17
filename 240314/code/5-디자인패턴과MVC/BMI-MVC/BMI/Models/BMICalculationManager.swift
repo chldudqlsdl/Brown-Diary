@@ -11,7 +11,7 @@ import UIKit
 struct BMICalculationManager {
     
     // BMI계산 결과값 보관위한 변수
-    var bmi: BMI?
+    private var bmi: BMI?
     
     // BMI 계산 결과값 리턴하는 함수
     mutating func getBMI(height: String, weight: String) -> BMI {
