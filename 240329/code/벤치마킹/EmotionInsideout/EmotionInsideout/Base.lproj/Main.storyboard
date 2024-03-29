@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XIG-ca-drx">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--오늘의 감정-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmotionInsideout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="txq-Hj-hbs">
+                                <rect key="frame" x="26.666666666666657" y="296" width="340" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-mt-0BN">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ISn-ml-q5J"/>
+                                            <constraint firstAttribute="width" constant="100" id="l2D-Ko-ghb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="sorrow"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="emoBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELT-u5-ePL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0w-WW-cqr">
+                                        <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="32v-P5-qpM"/>
+                                            <constraint firstAttribute="height" constant="100" id="vOZ-in-vKW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="joy"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="emoBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRQ-Di-3jb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlQ-HY-hXR">
+                                        <rect key="frame" x="240" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="huY-q6-kO3"/>
+                                            <constraint firstAttribute="width" constant="100" id="ws5-CE-WeJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="angry"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="emoBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyb-Ng-TJW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q65-pQ-jV5">
+                                <rect key="frame" x="86.666666666666686" y="456" width="220" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIK-ui-NG0">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9d9-lQ-jpW"/>
+                                            <constraint firstAttribute="width" constant="100" id="YwU-JX-CXV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="disgust"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="emoBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cii-kC-BGm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-ry-nS4">
+                                        <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ZQd-Ej-xcg"/>
+                                            <constraint firstAttribute="width" constant="100" id="kDK-A1-aQh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="fear"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="emoBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vl-yx-3Kn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q65-pQ-jV5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9JW-hO-jjS"/>
+                            <constraint firstItem="txq-Hj-hbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KtZ-Ht-zdA"/>
+                            <constraint firstItem="txq-Hj-hbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="V2y-yR-Vqk"/>
+                            <constraint firstItem="q65-pQ-jV5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="yIF-KH-ciu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="오늘의 감정" id="pr7-MT-lzt"/>
+                    <connections>
+                        <outlet property="button0" destination="qBI-mt-0BN" id="THx-2Q-anB"/>
+                        <outlet property="button1" destination="a0w-WW-cqr" id="NDs-E6-6Od"/>
+                        <outlet property="button2" destination="SlQ-HY-hXR" id="2UT-Ss-bex"/>
+                        <outlet property="button3" destination="iIK-ui-NG0" id="BmB-2Z-Pxp"/>
+                        <outlet property="button4" destination="Rhr-ry-nS4" id="vau-Vb-SEX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046.5648854961833" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D26-hT-vlN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XIG-ca-drx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R8Q-ue-pcM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xMr-MG-VIc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8e-9N-Qzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="angry" width="1600" height="1200"/>
+        <image name="disgust" width="1600" height="1200"/>
+        <image name="fear" width="1600" height="1200"/>
+        <image name="joy" width="1600" height="1200"/>
+        <image name="sorrow" width="1600" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
