@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB1d2Gi3xUOOx4LrbJyH3PiSufCF0PyUWE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>867562975189</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>BrownUIKit.TwitterTutorial</string>
+	<key>PROJECT_ID</key>
+	<string>twittertutorial-3918f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>twittertutorial-3918f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:867562975189:ios:e1b0668696555cbac7175c</string>
+</dict>
+</plist>
